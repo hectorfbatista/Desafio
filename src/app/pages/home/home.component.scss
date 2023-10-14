@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 30%;
+}
+
+@media (max-width: 425px) {
+  .container {
+    display: grid;
+    position: relative;  
+
+    app-card {
+      margin-bottom: 15px;
+    }
+  }
+}

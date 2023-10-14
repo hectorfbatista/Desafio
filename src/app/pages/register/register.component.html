@@ -1,0 +1,42 @@
+<div class="container">
+  <form class="form" [formGroup]="form">
+    <mat-form-field>
+      <mat-label>
+        Nome completo [sem abreviações]
+      </mat-label>
+      <input matInput formControlName="name" type="text">
+      <mat-error>Campo deve conter 3 caracteres ou mais</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>
+        CPF
+      </mat-label>
+      <input matInput formControlName="cpf" type="text">
+      <mat-error>{{getMessageFormError('cpf')}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label >
+        Telefone
+      </mat-label>
+      <input matInput formControlName="phone" type="text">
+      <mat-error>Campo deve conter 11 caracteres</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>
+        E-mail
+      </mat-label>
+      <input matInput formControlName="email" type="email">
+      <mat-error>Email inválido</mat-error>
+    </mat-form-field>
+  </form>
+  <div>
+    <button class="button" (click)="onRegister()" [disabled]="form.invalid"> 
+      <span *ngIf="!loading">
+        Cadastrar 
+      </span> 
+      <span class="button-loading" *ngIf="loading">
+        <mat-spinner></mat-spinner>
+      </span>
+    </button>
+  </div>
+</div>

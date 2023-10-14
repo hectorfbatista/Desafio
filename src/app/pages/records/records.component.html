@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="card-person" *ngFor="let element of records">
+    <app-card-person
+    card-name="{{element.name}}"
+    card-cpf="{{element.cpf}}"
+    card-img="assets/icon-register.jpeg"
+    card-phone="{{element.phone}}"
+    card-email="{{element.email}}"
+    (onDelete)="delete(element)">
+    </app-card-person>
+  </div>
+</div>
