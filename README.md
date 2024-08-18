@@ -1,6 +1,6 @@
-# Desafio
+# Tinnova
 
-Esse projeto foi gerado para o desafio Tinnova usando Angular cli 16.2.
+Esse projeto foi gerado para estudo pessoal usando Angular cli 16.2.
 
 ## Iniciando o projeto
 
